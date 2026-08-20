@@ -104,3 +104,6 @@ downloads/
 # ================================
 Thumbs.db
 .DS_Store
+
+# Third-party Antigravity skills
+.agents/plugins/frontend-design/
