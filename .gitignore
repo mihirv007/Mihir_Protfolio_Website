@@ -1,0 +1,106 @@
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ================================
+# Virtual Environment
+# ================================
+.venv/
+venv/
+env/
+ENV/
+
+# ================================
+# Environment Variables / Secrets
+# ================================
+.env
+.env.*
+!.env.example
+
+# Google OAuth / Credentials
+credentials.json
+token.json
+*.pem
+*.key
+
+# ================================
+# WAT Temporary Files
+# ================================
+.tmp/
+
+# ================================
+# Jupyter Notebook
+# ================================
+.ipynb_checkpoints/
+
+# ================================
+# Testing / Coverage
+# ================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ================================
+# Build / Distribution
+# ================================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ================================
+# IDE / Editors
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ================================
+# Logs
+# ================================
+*.log
+
+# ================================
+# ML / AI Generated Files
+# ================================
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.keras
+*.pth
+*.pt
+*.onnx
+
+# ================================
+# Large Datasets
+# ================================
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.zip
+
+# ================================
+# Generated Outputs
+# ================================
+outputs/
+output/
+results/
+generated/
+uploads/
+downloads/
+
+# ================================
+# OS Files
+# ================================
+Thumbs.db
+.DS_Store
