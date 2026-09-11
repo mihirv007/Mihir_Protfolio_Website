@@ -1,11 +1,9 @@
 {
-  "buildCommand": "cd stitch_artisan_developer_portfolio && npm install && npm run build",
-  "outputDirectory": "stitch_artisan_developer_portfolio/dist",
-  "framework": "vite",
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/code.html"
+      "source": "/",
+      "destination": "/stitch_artisan_developer_portfolio/code.html",
+      "permanent": true
     }
   ]
 }
