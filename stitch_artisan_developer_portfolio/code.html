@@ -14,15 +14,67 @@
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
-  const form = document.getElementById('contactForm');
+  const words = ["Intelligent", "Smart", "Beautiful"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeElement; // We declare this here, but don't look for it yet!
 
-  form.addEventListener('submit', function(e) {
-      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-      if (!hCaptcha) {
-          e.preventDefault();
-          alert("Please check the box to prove you are human!");
-          return;
-      }
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+      // Erase character
+      typeElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      // Type character
+      typeElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    // Default typing speeds
+    let typeSpeed = isDeleting ? 100 : 150;
+
+    // If word is completely typed out
+    if (!isDeleting && charIndex === currentWord.length) {
+      // Pause for 5 seconds before erasing
+      typeSpeed = 10000; 
+      isDeleting = true;
+    } 
+    // If word is completely erased
+    else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      // Move to the next word
+      wordIndex = (wordIndex + 1) % words.length;
+      // Short pause before typing the next word
+      typeSpeed = 500; 
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+  }
+
+  // WAIT for the page to load, THEN find the element and start typing
+  document.addEventListener("DOMContentLoaded", () => {
+    typeElement = document.getElementById("typewriter-text");
+    if (typeElement) {
+      typeEffect();
+    }
+  });
+
+  // Contact Form Logic
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+          const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
+          if (hCaptcha && !hCaptcha.value) {
+              e.preventDefault();
+              alert("Please check the box to prove you are human!");
+              return;
+          }
+      });
+    }
   });
 </script>
 <script id="tailwind-config">
@@ -165,22 +217,25 @@
 </div>
 <!-- Main Headline -->
 <h1 class="font-headline-lg lg:font-display text-headline-lg lg:text-display text-[#172d25] tracking-tight leading-tight">
-                Building <span class="text-[#df735e] italic font-serif">Intelligent</span> Things With Code.
-              </h1>
+  Building <span id="typewriter-text" class="text-[#df735e] italic font-serif cursor-blink"></span> Things With Code.
+</h1>
+
 <!-- Supporting Story Paragraph -->
-<p class="font-body-lg text-body-lg text-[#466056] max-w-lg leading-relaxed">
-                Python Backend Developer and AI/ML Engineer focused on building practical applications and solving real-world problems with code.
-              </p>
-<!-- Actions Row -->
-<div class="flex flex-wrap items-center gap-space-md pt-space-xs w-full sm:w-auto">
-<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-full bg-[#df735e] text-white font-label-md text-label-md border border-[#c15e4a] shadow-[0_6px_16px_rgba(223,115,94,0.35)] hover:bg-[#d46752] hover:-translate-y-0.5 transition-all" href="#work">
-<span class="">View My Work</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-<a class="inline-flex items-center justify-center px-space-lg py-3 rounded-full bg-[#faf8f4] text-[#172d25] font-label-md text-label-md shadow-xs hover:bg-white transition-all border border-[#233e34]/20" href="#about">
-<span class="">About Me</span>
-</a>
+<p class="font-body-lg text-body-lg text-[#466056] max-w-lg leading-relaxed mt-4">
+  Python Backend Developer and AI/ML Engineer focused on building practical applications and solving real-world problems with code.
+</p>
+
+<!-- Actions Row (This is where the broken <a> tag was!) -->
+<div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+  <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#df735e] text-white font-semibold text-sm border border-[#c15e4a] shadow-[0_6px_16px_rgba(223,115,94,0.35)] hover:bg-[#d46752] hover:-translate-y-0.5 transition-all" href="#work">
+    <span class="">View My Work</span>
+    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+  </a>
+  <a class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#faf8f4] text-[#172d25] font-semibold text-sm shadow-xs hover:bg-white transition-all border border-[#233e34]/20" href="#about">
+    <span class="">About Me</span>
+  </a>
 </div>
+
 <!-- Soft status pill -->
 <div class="flex items-center gap-space-sm pt-space-sm">
 <div class="flex -space-x-1 items-center">

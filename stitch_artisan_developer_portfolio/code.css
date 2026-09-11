@@ -59,3 +59,15 @@
   border: 1.5px solid #335347;
   border-radius: 18px 15px 19px 16px;
 }
+
+.cursor-blink {
+  border-right: 2px solid #df735e;
+  padding-right: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { 
+    border-color: transparent; 
+  }
+}
