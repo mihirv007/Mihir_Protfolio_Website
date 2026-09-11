@@ -1,0 +1,7 @@
+{
+  "name": "mihir-protfolio-website",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix stitch_artisan_developer_portfolio"
+  }
+}
