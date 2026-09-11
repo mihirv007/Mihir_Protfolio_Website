@@ -13,6 +13,18 @@
 <link rel="stylesheet" href="code.css">
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e) {
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+      if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please check the box to prove you are human!");
+          return;
+      }
+  });
+</script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -887,7 +899,49 @@
            ======================================================== -->
 <section class="relative py-space-3xl lg:py-space-4xl overflow-hidden bg-[#d8ebe2]" id="contact"><div class="max-w-[1024px] mx-auto px-gutter-mobile lg:px-6 relative z-10 py-8 lg:py-12">
   <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-[0_4px_24px_rgba(23,45,37,0.06)] border border-[#233e34]/10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"><div class="flex flex-col justify-between h-full bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5 text-[#df735e] font-mono text-xs uppercase font-semibold tracking-wider mb-2"><span class="material-symbols-outlined text-[16px]">outgoing_mail</span><span class="">06 — SAY HELLO</span></div><h2 class="text-3xl lg:text-4xl font-headline-lg font-bold text-[#172d25] tracking-tight leading-tight mb-4">Let's Build Something.</h2><p class="font-body-md text-sm sm:text-[15px] text-[#466056] leading-relaxed mb-6">Have an idea, opportunity, or interesting problem? I'd love to hear about it. Whether it's an API design inquiry, AI integration, or friendly coffee chat.</p></div><div class="flex flex-col gap-3 mt-auto"><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="mailto:mihirverma000@gmail.com"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">mail</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Direct Mail</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">mihirverma000@gmail.com</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://github.com/mihirv007" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">code</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">GitHub Profile</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">https://github.com/mihirv007</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://www.linkedin.com/in/mihir-verma-380559266/a" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">link</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Professional Network</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">www.linkedin.com/in/mihir-verma</span></div></a></div></div><div class="bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs flex flex-col justify-between h-full"><form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col justify-between h-full gap-4" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); this.reset();"><input type="hidden" name="access_key" value="35608e83-1320-4ea6-8adf-e8eef97c6d55"><div class="flex flex-col gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-name">Your Name</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-name" placeholder="e.g. Alex Henderson" required="" type="text"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-email">Email Address</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-email" placeholder="alex@example.com" required="" type="email"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-msg">Message or Project Note</label><textarea class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all resize-none shadow-xs" id="contact-msg" placeholder="Tell me about what you are looking to build or collaborate on..." required="" rows="4"></textarea></div></div><div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-auto"><button class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#df735e] hover:bg-[#d46752] text-white text-sm font-medium border border-[#c15e4a] shadow-[0_4px_12px_rgba(223,115,94,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all" type="submit"><span class="">Send Message</span><span class="text-[14px]">→</span></button><span class="text-xs text-[#466056] flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-[#3d5c52]">lock</span>Safe &amp; direct communication</span></div><div class="hidden p-3 rounded-xl bg-[#d8ebe2] text-[#172d25] text-xs sm:text-sm flex items-center gap-2 border border-[#233e34]/20" id="formSuccess"><span class="material-symbols-outlined text-[#2b684f] text-[18px]">check_circle</span><span class="">Thank you! Your note has been queued. I'll get back to you shortly.</span></div></form></div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"><div class="flex flex-col justify-between h-full bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5 text-[#df735e] font-mono text-xs uppercase font-semibold tracking-wider mb-2"><span class="material-symbols-outlined text-[16px]">outgoing_mail</span><span class="">06 — SAY HELLO</span></div><h2 class="text-3xl lg:text-4xl font-headline-lg font-bold text-[#172d25] tracking-tight leading-tight mb-4">Let's Build Something.</h2><p class="font-body-md text-sm sm:text-[15px] text-[#466056] leading-relaxed mb-6">Have an idea, opportunity, or interesting problem? I'd love to hear about it. Whether it's an API design inquiry, AI integration, or friendly coffee chat.</p></div><div class="flex flex-col gap-3 mt-auto"><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="mailto:mihirverma000@gmail.com"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">mail</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Direct Mail</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">mihirverma000@gmail.com</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://github.com/mihirv007" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">code</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">GitHub Profile</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">https://github.com/mihirv007</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://www.linkedin.com/in/mihir-verma-380559266/a" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">link</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Professional Network</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">www.linkedin.com/in/mihir-verma</span></div></a></div></div><div class="bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs flex flex-col justify-between h-full">
+    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col justify-between h-full gap-4" id="contactForm">
+  
+  <!-- 1. YOUR REAL ACCESS KEY GOES HERE -->
+  <input type="hidden" name="access_key" value="35608e83-1320-4ea6-8adf-e8eef97c6d55">
+  
+  <!-- 2. REDIRECT URL -->
+  <input type="hidden" name="redirect" value="https://mihirverma.vercel.app">
+
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-name">Your Name</label>
+      <input name="name" class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-name" placeholder="e.g. Alex Henderson" required="" type="text">
+    </div>
+    
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-email">Email Address</label>
+      <input name="email" class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-email" placeholder="alex@example.com" required="" type="email">
+    </div>
+    
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-msg">Message or Project Note</label>
+      <textarea name="message" class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all resize-none shadow-xs" id="contact-msg" placeholder="Tell me about what you are looking to build or collaborate on..." required="" rows="4"></textarea>
+    </div>
+  </div>
+  
+  <!-- Web3Forms Captcha Widget -->
+  <div class="h-captcha" data-captcha="true"></div>
+
+  <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-auto">
+    <button class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#df735e] hover:bg-[#d46752] text-white text-sm font-medium border border-[#c15e4a] shadow-[0_4px_12px_rgba(223,115,94,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all" type="submit">
+      <span class="">Send Message</span><span class="text-[14px]">→</span>
+    </button>
+    
+    <span class="text-xs text-[#466056] flex items-center gap-1.5">
+      <span class="material-symbols-outlined text-[15px] text-[#3d5c52]">lock</span>Spam-protected communication
+    </span>
+  </div>
+</form>
+
+<!-- Web3Forms Script (Loads the Captcha visually) -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+      
   </div>
 </div></section>
 </div>
