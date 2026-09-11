@@ -1,4 +1,6 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Mihir Verma — Portfolio</title>
@@ -6,48 +8,10 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Gaegu:wght@400;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style>
-    @layer base {
-      html, body { margin: 0; padding: 0; background-color: #d8ebe2; color: #172d25; }
-      body { overscroll-behavior: none; }
-      main > :first-child { margin-top: 0 !important; }
-      main > :last-child { margin-bottom: 0 !important; }
-    }
-    ::-webkit-scrollbar { display: none; }
-    .font-hand { font-family: 'Gaegu', cursive, sans-serif; }
-    
-    /* Paper grid texture */
-    .bg-paper-grid {
-      background-size: 24px 24px;
-      background-image: 
-        linear-gradient(to right, rgba(23, 45, 37, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(23, 45, 37, 0.04) 1px, transparent 1px);
-    }
-    .bg-notebook-ruled {
-      background-size: 100% 28px;
-      background-image: linear-gradient(to bottom, transparent 27px, rgba(177, 204, 197, 0.35) 28px);
-    }
-    
-    /* Tactile stitched & hand-drawn stroke borders */
-    .stitched-border-top {
-      background-image: repeating-linear-gradient(to right, #466056 0, #466056 6px, transparent 6px, transparent 14px);
-      background-position: top;
-      background-size: 100% 1.5px;
-      background-repeat: no-repeat;
-    }
-    .hand-drawn-border {
-      border: 1.8px solid #233e34;
-      border-radius: 28px 24px 30px 25px / 25px 29px 24px 28px;
-    }
-    .hand-drawn-pill {
-      border: 1.5px solid #233e34;
-      border-radius: 9999px 9995px 9998px 9994px;
-    }
-    .hand-drawn-sm {
-      border: 1.5px solid #335347;
-      border-radius: 18px 15px 19px 16px;
-    }
-  </style>
+
+<!-- Linked CSS File -->
+<link rel="stylesheet" href="code.css">
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
     tailwind.config = {
@@ -134,11 +98,10 @@
 <header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#d8ebe2]/90 backdrop-blur-md border-b border-[#233e34]/15">
 <div class="h-20 max-w-[1120px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between">
 <a class="flex items-center gap-space-sm group" data-path="home" href="#hero">
-<img alt="Mihir Verma Logo Mark" class="h-8 w-auto object-contain transition-transform group-hover:rotate-6" src="brand_assets/logo/logo.png">
+<img alt="Mihir Verma Logo Mark" class="h-8 w-auto object-contain transition-transform group-hover:rotate-6" src="../brand_assets/logo/logo.png">
 <div class="flex flex-col">
 <div class="flex items-center gap-space-xs">
 <span class="font-title text-title text-[#172d25] tracking-tight font-bold group-hover:text-[#df735e] transition-colors">Mihir Verma</span>
-<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-[#c9e4d8] text-[#172d25] border border-[#233e34]/20 font-mono font-medium"><br></span>
 </div>
 <span class="font-label-sm text-label-sm text-[#466056] hidden sm:inline-block">Python &amp; AI Engineer</span>
 </div>
@@ -187,7 +150,6 @@
 <div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-[#cbe3d7] text-[#172d25] text-label-sm font-label-sm tracking-wide shadow-xs border border-[#233e34]/25">
 <span class="w-2 h-2 rounded-full bg-[#df735e] inline-block animate-pulse"></span>
 <span class="">PYTHON • AI/ML • BACKEND</span>
-<span class="text-xs text-[#df735e]">🌱</span>
 </div>
 <!-- Main Headline -->
 <h1 class="font-headline-lg lg:font-display text-headline-lg lg:text-display text-[#172d25] tracking-tight leading-tight">
@@ -195,7 +157,7 @@
               </h1>
 <!-- Supporting Story Paragraph -->
 <p class="font-body-lg text-body-lg text-[#466056] max-w-lg leading-relaxed">
-                Python Backend Developer and AI/ML enthusiast focused on building practical applications and solving real-world problems with code.
+                Python Backend Developer and AI/ML Engineer focused on building practical applications and solving real-world problems with code.
               </p>
 <!-- Actions Row -->
 <div class="flex flex-wrap items-center gap-space-md pt-space-xs w-full sm:w-auto">
@@ -242,7 +204,7 @@
 <div class="mt-space-sm pt-space-xs flex items-center justify-between text-[#466056] font-label-sm text-label-sm">
 <span class="flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px] text-[#df735e]">eco</span>
-                    Crafted with gentle precision
+                    Built with relentless accuracy
                   </span>
 <span class="text-[#3d5c52] font-mono text-body-sm">Indore, India</span>
 </div>
@@ -291,14 +253,12 @@
 </div>
 <div class="space-y-space-md">
 <p class="font-body-lg text-body-lg text-[#172d25] leading-relaxed">
-                    I'm a <strong class="font-semibold text-[#df735e]">Python Backend Developer and AI/ML enthusiast</strong> who enjoys turning ideas into practical applications. I work with Python, Django, Flask, REST APIs, databases, and machine learning technologies.
+                    I'm a <strong class="font-semibold text-[#df735e]">Python Backend Developer and AI/ML Engineer</strong> who enjoys turning ideas into practical applications. I work with Python, Django, Flask, REST APIs, databases, and machine learning technologies.
                   </p>
 <p class="font-body-md text-body-md text-[#466056] leading-relaxed">
                     My journey began with a natural curiosity about how systems communicate beneath the surface. From designing modular API architectures to fine-tuning machine learning models for visual classification, I treat code like an analog journal—clean, deliberate, and built for purpose.
                   </p>
-<p class="font-body-md text-body-md text-[#466056] leading-relaxed">
-                    I believe in technology that quietly empowers without creating cognitive noise. When I’m not testing endpoints or structuring datasets, I am studying new papers on deep learning architectures, building small automated utilities, and drinking black coffee.
-                  </p>
+
 </div>
 <!-- Quick Highlights Bar -->
 <div class="pt-space-md flex flex-wrap gap-space-xs border-t border-[#233e34]/10">
@@ -351,7 +311,7 @@
 </div>
 <!-- Hand-drawn mark watermark -->
 <div class="pt-space-sm flex items-center justify-end">
-<img alt="Mihir Verma Logo Mark" class="w-6 h-6 object-contain opacity-70" src="brand_assets/logo/logo.png">
+<img alt="Mihir Verma Logo Mark" class="w-6 h-6 object-contain opacity-70" src="../brand_assets/logo/logo.png">
 </div>
 </div>
 </div>
@@ -484,7 +444,7 @@
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">MySQL</span>
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">SQL</span>
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">MongoDB</span>
-<span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">Query Optimization</span>
+<span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">ChromaDB</span>
 </div>
 </div>
 <!-- Category 4: Tools -->
@@ -502,7 +462,7 @@
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">Git</span>
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">GitHub</span>
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">VS Code</span>
-<span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">Tableau</span>
+<span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">Claude</span>
 <span class="px-3 py-1.5 rounded-full bg-[#d8ebe2] text-[#172d25] font-label-md text-label-md border border-[#233e34]/15 hover:bg-[#cae5de] transition-colors">Excel</span>
 </div>
 </div>
@@ -643,11 +603,11 @@
 </div>
 <!-- Links -->
 <div class="flex items-center gap-space-md pt-space-sm">
-<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#faf8f4] text-[#172d25] font-label-md text-label-md hover:bg-[#e8f3ed] transition-colors border border-[#233e34]/20" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#faf8f4] text-[#172d25] font-label-md text-label-md hover:bg-[#e8f3ed] transition-colors border border-[#233e34]/20" href="https://github.com/mihirv007/Wildlife_Image_detection" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
 <span class="">Source Code</span>
 </a>
-<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#df735e] text-white font-label-md text-label-md hover:bg-[#d46752] transition-colors border border-[#c15e4a] shadow-xs" href="#">
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#df735e] text-white font-label-md text-label-md hover:bg-[#d46752] transition-colors border border-[#c15e4a] shadow-xs" href="https://wildlife-image-detection.vercel.app/">
 <span class="">View Live Demo</span>
 <span class="material-symbols-outlined text-[18px]">open_in_new</span>
 </a>
@@ -658,9 +618,9 @@
 <div class="flex items-center justify-between font-mono text-label-sm text-[#3d5c52]">
 <span class="flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px] text-[#df735e]">filter_center_focus</span>
-                        cnn_inference.py
+                        cnn_architecture.py
                       </span>
-<span class="text-[#3d5c52] font-semibold">Loss: 0.082</span>
+<span class="text-[#3d5c52] font-semibold">Loss: 0.22</span>
 </div>
 <div class="bg-white rounded-xl p-space-sm space-y-2 border border-[#233e34]/15">
 <div class="flex items-center justify-between text-label-sm text-[#466056] font-mono">
@@ -670,16 +630,16 @@
 <!-- Visual detection bounding mockup -->
 <div class="h-20 bg-[#faf8f4] rounded-lg relative overflow-hidden flex items-center justify-center p-2 border border-[#233e34]/10">
 <div class="w-3/4 h-5/6 border-2 border-dashed border-[#df735e] rounded-lg flex items-start justify-end p-1">
-<span class="bg-[#df735e] text-white text-[11px] font-mono px-1 rounded">Panthera tigris 94.8%</span>
+<span class="bg-[#df735e] text-white text-[11px] font-mono px-1 rounded">Panthera tigris 90.0%</span>
 </div>
 </div>
-<div class="p-2 rounded bg-[#eaf4ef] font-mono text-body-sm text-[#172d25] flex items-center justify-between">
+<div class="p-2 rounded bg-[#eaf4ef] font-mono text-body-sm text-[#172d25 flex items-center justify-between">
 <span class="">Confidence Score:</span>
-<strong class="text-[#df735e] font-bold">96.3% Match</strong>
+<strong class="text-[#df735e] font-bold">90.0% Match</strong>
 </div>
 </div>
 <div class="flex items-center justify-between text-body-sm text-[#3d5c52] font-label-sm">
-<span class="">12 Wildlife Classes</span>
+<span class="">5 Wildlife Classes</span>
 <span class="">Batch Image Processing</span>
 </div>
 </div>
@@ -880,7 +840,7 @@
         </div>
         <div class="flex flex-col">
           <span class="font-label-sm text-label-sm text-[#466056]">Cumulative Grade</span>
-          <span class="font-title text-title text-[#172d25] font-bold">CGPA: 7.8</span>
+          <span class="font-title text-title text-[#172d25] font-bold">CGPA: 8.0</span>
         </div>
       </div>
       <span class="text-[#3d5c52] font-label-sm text-label-sm font-medium">Class of 2026</span>
@@ -927,17 +887,17 @@
            ======================================================== -->
 <section class="relative py-space-3xl lg:py-space-4xl overflow-hidden bg-[#d8ebe2]" id="contact"><div class="max-w-[1024px] mx-auto px-gutter-mobile lg:px-6 relative z-10 py-8 lg:py-12">
   <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-[0_4px_24px_rgba(23,45,37,0.06)] border border-[#233e34]/10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"><div class="flex flex-col justify-between h-full bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5 text-[#df735e] font-mono text-xs uppercase font-semibold tracking-wider mb-2"><span class="material-symbols-outlined text-[16px]">outgoing_mail</span><span class="">06 — SAY HELLO</span></div><h2 class="text-3xl lg:text-4xl font-headline-lg font-bold text-[#172d25] tracking-tight leading-tight mb-4">Let's Build Something.</h2><p class="font-body-md text-sm sm:text-[15px] text-[#466056] leading-relaxed mb-6">Have an idea, opportunity, or interesting problem? I'd love to hear about it. Whether it's an API design inquiry, AI integration, or friendly coffee chat.</p></div><div class="flex flex-col gap-3 mt-auto"><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="mailto:mihirverma.dev@gmail.com"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">mail</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Direct Mail</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">mihirverma.dev@gmail.com</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://github.com/mihirverma" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">code</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">GitHub Profile</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">github.com/mihirverma</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://linkedin.com/in/mihir-verma" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">link</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Professional Network</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">linkedin.com/in/mihir-verma</span></div></a></div></div><div class="bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs flex flex-col justify-between h-full"><form class="flex flex-col justify-between h-full gap-4" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); this.reset();"><div class="flex flex-col gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-name">Your Name</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-name" placeholder="e.g. Alex Henderson" required="" type="text"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-email">Email Address</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-email" placeholder="alex@example.com" required="" type="email"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-msg">Message or Project Note</label><textarea class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all resize-none shadow-xs" id="contact-msg" placeholder="Tell me about what you are looking to build or collaborate on..." required="" rows="4"></textarea></div></div><div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-auto"><button class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#df735e] hover:bg-[#d46752] text-white text-sm font-medium border border-[#c15e4a] shadow-[0_4px_12px_rgba(223,115,94,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all" type="submit"><span class="">Send Message</span><span class="text-[14px]">→</span></button><span class="text-xs text-[#466056] flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-[#3d5c52]">lock</span>Safe &amp; direct communication</span></div><div class="hidden p-3 rounded-xl bg-[#d8ebe2] text-[#172d25] text-xs sm:text-sm flex items-center gap-2 border border-[#233e34]/20" id="formSuccess"><span class="material-symbols-outlined text-[#2b684f] text-[18px]">check_circle</span><span class="">Thank you! Your note has been queued. I'll get back to you shortly.</span></div></form></div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"><div class="flex flex-col justify-between h-full bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5 text-[#df735e] font-mono text-xs uppercase font-semibold tracking-wider mb-2"><span class="material-symbols-outlined text-[16px]">outgoing_mail</span><span class="">06 — SAY HELLO</span></div><h2 class="text-3xl lg:text-4xl font-headline-lg font-bold text-[#172d25] tracking-tight leading-tight mb-4">Let's Build Something.</h2><p class="font-body-md text-sm sm:text-[15px] text-[#466056] leading-relaxed mb-6">Have an idea, opportunity, or interesting problem? I'd love to hear about it. Whether it's an API design inquiry, AI integration, or friendly coffee chat.</p></div><div class="flex flex-col gap-3 mt-auto"><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="mailto:mihirverma000@gmail.com"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">mail</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Direct Mail</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">mihirverma000@gmail.com</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://github.com/mihirv007" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">code</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">GitHub Profile</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">https://github.com/mihirv007</span></div></a><a class="flex items-center gap-3.5 p-3 sm:p-3.5 px-4 rounded-2xl bg-[#e3f2eb] hover:bg-[#cae5de] border border-[#233e34]/10 transition-colors group text-left" href="https://www.linkedin.com/in/mihir-verma-380559266/a" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-xl bg-white text-[#3d5c52] flex items-center justify-center group-hover:bg-[#df735e] group-hover:text-white transition-colors border border-[#233e34]/10 shadow-xs"><span class="material-symbols-outlined text-lg">link</span></div><div class="flex flex-col"><span class="text-[11px] font-mono font-medium text-[#466056] uppercase tracking-wider">Professional Network</span><span class="font-title text-[14px] sm:text-[15px] text-[#172d25] font-semibold group-hover:text-[#df735e] transition-colors">www.linkedin.com/in/mihir-verma</span></div></a></div></div><div class="bg-[#faf8f4] rounded-2xl p-6 sm:p-8 border border-[#233e34]/15 shadow-xs flex flex-col justify-between h-full"><form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col justify-between h-full gap-4" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); this.reset();"><input type="hidden" name="access_key" value="35608e83-1320-4ea6-8adf-e8eef97c6d55"><div class="flex flex-col gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-name">Your Name</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-name" placeholder="e.g. Alex Henderson" required="" type="text"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-email">Email Address</label><input class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all shadow-xs" id="contact-email" placeholder="alex@example.com" required="" type="email"></div><div class="flex flex-col gap-1.5"><label class="text-xs sm:text-sm font-semibold text-[#172d25]" for="contact-msg">Message or Project Note</label><textarea class="w-full px-4 py-2.5 rounded-xl bg-white text-[#172d25] text-sm placeholder:text-[#466056]/60 border border-[#233e34]/20 focus:outline-none focus:border-[#df735e] focus:ring-1 focus:ring-[#df735e] transition-all resize-none shadow-xs" id="contact-msg" placeholder="Tell me about what you are looking to build or collaborate on..." required="" rows="4"></textarea></div></div><div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-auto"><button class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#df735e] hover:bg-[#d46752] text-white text-sm font-medium border border-[#c15e4a] shadow-[0_4px_12px_rgba(223,115,94,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all" type="submit"><span class="">Send Message</span><span class="text-[14px]">→</span></button><span class="text-xs text-[#466056] flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-[#3d5c52]">lock</span>Safe &amp; direct communication</span></div><div class="hidden p-3 rounded-xl bg-[#d8ebe2] text-[#172d25] text-xs sm:text-sm flex items-center gap-2 border border-[#233e34]/20" id="formSuccess"><span class="material-symbols-outlined text-[#2b684f] text-[18px]">check_circle</span><span class="">Thank you! Your note has been queued. I'll get back to you shortly.</span></div></form></div></div>
   </div>
 </div></section>
 </div>
 </main>
 <!-- Footer with matching storybook warmth -->
-<footer class="w-full bg-[#d8ebe2] border-t border-[#233e34]/15 py-8 pb-12"><div class="max-w-[1120px] mx-auto px-gutter-mobile lg:px-gutter-desktop py-6">
+<footer class="w-full bg-[#faf8f4] border-t border-[#233e34]/15 py-8 pb-12"><div class="max-w-[1120px] mx-auto px-gutter-mobile lg:px-gutter-desktop py-6">
   <div class="flex flex-col md:flex-row items-center justify-between gap-4">
     <!-- Left: Brand & Copyright -->
     <div class="flex items-center gap-2 text-left">
-      <span class="text-[#df735e] text-base leading-none select-none">🌱</span>
+      <img alt="Mihir Verma Logo Mark" class="h-8 w-auto object-contain transition-transform group-hover:rotate-6" src="../brand_assets/logo/logo.png">
       <div class="flex flex-col">
         <span class="font-title text-[15px] text-[#172d25] font-bold leading-tight">Mihir Verma</span>
         <p class="font-body-sm text-[12px] text-[#466056] leading-tight">© 2026 Mihir Verma · All rights reserved.</p>
@@ -946,7 +906,6 @@
     
     <!-- Center: Built with curiosity & code badge -->
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#172d25] text-xs font-medium border border-[#233e34]/15 shadow-xs">
-      <span class="text-[#df735e] text-[13px]">☕</span>
       <span class="">Built with curiosity &amp; code</span>
       <span class="material-symbols-outlined text-[#3d5c52] text-[14px]">auto_awesome</span>
     </div>
@@ -961,9 +920,5 @@
   </div>
 </div></footer>
 
-
-
-
-
-
-</body></html>
+</body>
+</html>
