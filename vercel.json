@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd stitch_artisan_developer_portfolio && npm install && npm run build",
+  "outputDirectory": "stitch_artisan_developer_portfolio/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/code.html"
+    }
+  ]
+}
