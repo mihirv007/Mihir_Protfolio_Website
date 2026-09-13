@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/*
+ * ============================================
+ * Tailwind CSS v4 — Custom Theme Extension
+ * Ported from the original tailwind.config in code.html
+ * ============================================
+ */
+@theme {
+  /* ── Colors ── */
+  --color-on-tertiary: #ffffff;
+  --color-on-surface: #172d25;
+  --color-primary-fixed: #ffdad3;
+  --color-surface-container: #daf4ea;
+  --color-surface-tint: #df735e;
+  --color-tertiary: #5f5e5b;
+  --color-surface-container-highest: #cfe8df;
+  --color-primary: #d97762;
+  --color-on-secondary-container: #172d25;
+  --color-outline: #466056;
+  --color-outline-variant: #dcc0bb;
+  --color-primary-container: #df735e;
+  --color-secondary-fixed: #cde8e1;
+  --color-on-background: #172d25;
+  --color-on-secondary: #ffffff;
+  --color-surface: #e3f2eb;
+  --color-background: #d8ebe2;
+  --color-surface-container-low: #e0f9f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #466056;
+  --color-secondary: #3d5c52;
+  --color-secondary-container: #cae5de;
+  --color-ink: #172d25;
+
+  /* ── Border Radius ── */
+  --radius: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /* ── Spacing ── */
+  --spacing-space-4xl: 6rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-gutter-mobile: 1.25rem;
+  --spacing-space-3xl: 4rem;
+  --spacing-container-max: 1120px;
+  --spacing-space-sm: 0.75rem;
+  --spacing-gutter-desktop: 2.5rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-md: 1rem;
+
+  /* ── Font Family ── */
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-title: "Space Grotesk", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-headline-lg-mobile: "Space Grotesk", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-sm: "Space Grotesk", sans-serif;
+  --font-label-sm: "Plus Jakarta Sans", sans-serif;
+
+  /* ── Font Size ── */
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--font-weight: 600;
+
+  --text-title: 18px;
+  --text-title--line-height: 24px;
+  --text-title--font-weight: 600;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-display: 56px;
+  --text-display--line-height: 64px;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 700;
+
+  --text-body-lg: 17px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.02em;
+  --text-label-sm--font-weight: 600;
+}
+
+/*
+ * ============================================
+ * Base Layer — from code.css
+ * ============================================
+ */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #d8ebe2;
+    color: #172d25;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+ * ============================================
+ * Custom Utility Classes — from code.css
+ * ============================================
+ */
+.font-hand {
+  font-family: 'Gaegu', cursive, sans-serif;
+}
+
+/* Paper grid texture */
+.bg-paper-grid {
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, rgba(23, 45, 37, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 45, 37, 0.04) 1px, transparent 1px);
+}
+
+.bg-notebook-ruled {
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(177, 204, 197, 0.35) 28px);
+}
+
+/* Tactile stitched & hand-drawn stroke borders */
+.stitched-border-top {
+  background-image: repeating-linear-gradient(to right, #466056 0, #466056 6px, transparent 6px, transparent 14px);
+  background-position: top;
+  background-size: 100% 1.5px;
+  background-repeat: no-repeat;
+}
+
+.hand-drawn-border {
+  border: 1.8px solid #233e34;
+  border-radius: 28px 24px 30px 25px / 25px 29px 24px 28px;
+}
+
+.hand-drawn-pill {
+  border: 1.5px solid #233e34;
+  border-radius: 9999px 9995px 9998px 9994px;
+}
+
+.hand-drawn-sm {
+  border: 1.5px solid #335347;
+  border-radius: 18px 15px 19px 16px;
+}
+
+.cursor-blink {
+  border-right: 2px solid #df735e;
+  padding-right: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.crisp-avatar {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
