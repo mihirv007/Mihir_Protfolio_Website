@@ -121,7 +121,7 @@ export default function Hero() {
                 <img
                   alt="Charming hand-drawn 2D vector-style illustration of a developer's cozy workspace"
                   className="w-full h-full object-cover rounded-2xl hover:scale-[1.02] transition-transform duration-500 ease-out"
-                  src=""
+                  src="/assets/hero_photo.png"
                 />
                 {/* Floating code tags */}
                 <div className="absolute bottom-3 left-3 bg-[#faf8f4]/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-label-sm font-label-sm text-[#172d25] shadow-xs flex items-center gap-1 border border-[#233e34]/20">
