@@ -109,7 +109,7 @@ export default function Work() {
                     <span className="material-symbols-outlined text-[18px]">code</span>
                     <span>Source Code</span>
                   </a>
-                  <a className="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#df735e] text-white font-label-md text-label-md hover:bg-[#d46752] transition-colors border border-[#c15e4a] shadow-xs" href="#">
+                  <a className="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-[#df735e] text-white font-label-md text-label-md hover:bg-[#d46752] transition-colors border border-[#c15e4a] shadow-xs" href="https://zomato-review-sentiment-analysis.vercel.app/">
                     <span>View Live Demo</span>
                     <span className="material-symbols-outlined text-[18px]">open_in_new</span>
                   </a>
