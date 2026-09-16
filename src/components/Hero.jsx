@@ -118,7 +118,9 @@ export default function Hero() {
 
               {/* Main Artwork */}
               <div className="relative overflow-hidden rounded-2xl bg-[#e3f2eb] aspect-[4/3] flex items-center justify-center border border-[#233e34]/20">
-                <img
+                <img 
+                  fetchpriority="high"
+                  decoding="async"
                   alt="Charming hand-drawn 2D vector-style illustration of a developer's cozy workspace"
                   className="w-full h-full object-cover rounded-2xl hover:scale-[1.02] transition-transform duration-500 ease-out"
                   src="/assets/hero_photo.png"
